@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header @search="filter" />
     <MainBox :filmArray="films" />
   </div>
 </template>
@@ -19,17 +19,24 @@ export default {
   data() {
     return {
       films: [],
+      cercare: "",
     };
   },
   mounted() {
     axios
       .get(
-        "https://api.themoviedb.org/3/search/movie?query=tita&api_key=dba3d7b0f4b42d23bf86d3f1d4b9c93e"
+        "https://api.themoviedb.org/3/search/movie?query=tit&api_key=dba3d7b0f4b42d23bf86d3f1d4b9c93e"
       )
       .then((response) => {
         this.films = response.data.results;
         console.log(response.data.results);
       });
+  },
+  methods: {
+    filter(keyword) {
+      this.cercare = keyword;
+      console.log(this.cercare);
+    },
   },
 };
 </script>

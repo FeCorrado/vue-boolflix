@@ -3,10 +3,9 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   .card {
     width: calc(90% / 3);
-    img {
-      width: 100%;
-    }
   }
 }
