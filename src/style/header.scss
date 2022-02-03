@@ -1,0 +1,14 @@
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: black;
+  h1 {
+    color: red;
+  }
+  button {
+    margin-left: 5px;
+  }
+}

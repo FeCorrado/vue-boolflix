@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <MainBox :film="film" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import axios from "axios";
+import Header from "./components/Header.vue";
+import MainBox from "./components/MainBox.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    MainBox,
+  },
+  data() {
+    return {
+      films: [],
+    };
+  },
+  mounted() {
+    axios
+      .get(
+        "https://api.themoviedb.org/3/search/movie?query=tita&api_key=dba3d7b0f4b42d23bf86d3f1d4b9c93e"
+      )
+      .then((response) => {
+        this.films = response.data;
+      });
+  },
+};
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss"></style>
