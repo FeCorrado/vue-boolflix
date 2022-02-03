@@ -5,6 +5,10 @@
       :key="index"
       class="card"
       :immagine="film.poster_path"
+      :titolo="film.title"
+      :titoloorigine="film.original_title"
+      :voto="film.vote_average"
+      :desc="film.overview"
     />
   </div>
 </template>

@@ -11,7 +11,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: function () {
+    return {
+      keywordSearch: "",
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
