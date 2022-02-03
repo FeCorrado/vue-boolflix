@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <MainBox :films="films" />
+    <MainBox :filmArray="films" />
   </div>
 </template>
 
@@ -27,7 +27,8 @@ export default {
         "https://api.themoviedb.org/3/search/movie?query=tita&api_key=dba3d7b0f4b42d23bf86d3f1d4b9c93e"
       )
       .then((response) => {
-        this.films = response.data;
+        this.films = response.data.results;
+        console.log(response.data.results);
       });
   },
 };

@@ -1,5 +1,12 @@
 .main-box {
   background-color: rgb(43, 43, 43);
   width: 100%;
-  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  .card {
+    width: calc(90% / 3);
+    img {
+      width: 100%;
+    }
+  }
 }

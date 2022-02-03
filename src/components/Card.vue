@@ -1,7 +1,7 @@
 <template>
-  <div class="">
+  <div class="card">
     <div>
-      <img :src="immagine" alt="" />
+      <img :src="'https://image.tmdb.org/t/p/w500' + immagine" alt="" />
     </div>
   </div>
 </template>
@@ -10,6 +10,14 @@
 export default {
   props: {
     immagine: String,
+  },
+  data() {
+    return {
+      dischi: [],
+      dischiFiltrati: [],
+      generi: [],
+      loading: true,
+    };
   },
 };
 </script>

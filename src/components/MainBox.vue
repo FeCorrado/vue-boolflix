@@ -1,10 +1,10 @@
 <template>
   <div class="main-box">
     <Card
-      v-for="(film, index) in films"
+      v-for="(film, index) in filmArray"
       :key="index"
       class="card"
-      :immagine="film.backdrop_path"
+      :immagine="film.poster_path"
     />
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
     Card,
   },
   props: {
-    film: Array,
+    filmArray: Array,
   },
 };
 </script>
