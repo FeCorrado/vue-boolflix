@@ -1,6 +1,6 @@
 <template>
   <div class="main-box">
-    <card
+    <Card
       v-for="(film, index) in films"
       :key="index"
       class="card"

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <MainBox :film="film" />
+    <MainBox :films="films" />
   </div>
 </template>
 
