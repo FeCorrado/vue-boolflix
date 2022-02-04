@@ -2,11 +2,16 @@
   background-color: rgb(43, 43, 43);
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   .card {
-    width: calc(90% / 3);
+    width: calc(80% / 3);
     margin-top: 10px;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 }

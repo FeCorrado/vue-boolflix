@@ -15,7 +15,6 @@ export default {
     return {
       dischi: [],
       dischiFiltrati: [],
-      generi: [],
       loading: true,
     };
   },
