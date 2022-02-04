@@ -44,10 +44,8 @@ export default {
         .then((response) => {
           this.films = response.data.results;
           console.log(response.data.results);
+          console.log("s ", response.data.results[0]);
         });
-    },
-    filterTv(keyword) {
-      this.cercare = keyword;
       axios
         .get(
           `https://api.themoviedb.org/3/search/tv?query="${this.cercare}"&language=it-IT&api_key=dba3d7b0f4b42d23bf86d3f1d4b9c93e`

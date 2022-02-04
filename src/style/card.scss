@@ -1,7 +1,35 @@
 .card {
   margin: auto;
+  height: 450px;
+  &:hover {
+    .block {
+      img {
+        display: none;
+      }
+    }
+    .none {
+      display: block;
+    }
+  }
+  .flag {
+    width: 150px;
+    height: 80px;
+    z-index: 100;
+  }
   img {
-    width: 90%;
+    width: 100%;
     height: 450px;
+    display: block;
+  }
+  .none {
+    color: white;
+    display: none;
+    div {
+      margin-bottom: 5px;
+    }
+  }
+  b {
+    font-size: 20px;
+    margin-right: 10px;
   }
 }

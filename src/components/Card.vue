@@ -1,7 +1,28 @@
 <template>
   <div class="card">
-    <div>
-      <img :src="'https://image.tmdb.org/t/p/w500' + immagine" alt="" />
+    <div class="block">
+      <img
+        v-if="immagine == null"
+        :src="'https://image.tmdb.org/t/p/w500/A5EFlfWZA3yAiCvY7hwFLF0aV8I.jpg'"
+        alt=""
+      />
+      <img v-else :src="'https://image.tmdb.org/t/p/w500' + immagine" alt="" />
+    </div>
+    <div class="none">
+      <div><b>Titolo:</b> {{ titolo }}</div>
+      <div><b>Titolo Originale:</b> {{ titoloorigine }}</div>
+      <div><b>Voto:</b> {{ voto }}</div>
+      <div>{{ len }}</div>
+      <div><b>Overview:</b> {{ desc }}</div>
+      <div>
+        <img
+          v-if="lingua.includes(len)"
+          class="flag"
+          :src="len + '.png'"
+          alt=""
+        />
+        <img v-else class="flag" :src="'nope.png'" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -10,12 +31,15 @@
 export default {
   props: {
     immagine: String,
+    titolo: String,
+    titoloorigine: String,
+    voto: Number,
+    desc: String,
+    len: String,
   },
   data() {
     return {
-      dischi: [],
-      dischiFiltrati: [],
-      loading: true,
+      lingua: ["it", "ja", "en", "fr", "ru"],
     };
   },
 };
