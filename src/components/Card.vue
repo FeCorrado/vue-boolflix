@@ -11,11 +11,11 @@
     <div class="none">
       <div><b>Titolo:</b> {{ titolo }}</div>
       <div><b>Titolo Originale:</b> {{ titoloorigine }}</div>
-      <div><b>Voto:</b> {{ voto }}</div>
-      <div v-for="(voti, i) in stelle" :key="i">
-        <i class="fas fa-star"></i>
+      <div class="conteiner-stelle">
+        <div v-for="(voti, i) in stelle" :key="i" class="stelle">
+          <i class="fas fa-star"></i>
+        </div>
       </div>
-      <div>{{ len }}</div>
       <div><b>Overview:</b> {{ desc }}</div>
       <div>
         <img
