@@ -10,7 +10,7 @@
           :immagine="film.poster_path"
           :titolo="film.title"
           :titoloorigine="film.original_title"
-          :voto="film.vote_average"
+          :voti="film.vote_average"
           :desc="film.overview"
           :len="film.original_language"
         />
@@ -24,7 +24,7 @@
           :immagine="tv.poster_path"
           :titolo="tv.name"
           :titoloorigine="tv.original_name"
-          :voto="tv.vote_average"
+          :voti="tv.vote_average"
           :desc="tv.overview"
           :len="tv.original_language"
         />

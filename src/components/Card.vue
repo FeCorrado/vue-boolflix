@@ -12,6 +12,9 @@
       <div><b>Titolo:</b> {{ titolo }}</div>
       <div><b>Titolo Originale:</b> {{ titoloorigine }}</div>
       <div><b>Voto:</b> {{ voto }}</div>
+      <div v-for="(voto, i) in stelle" :key="i">
+        <i class="fas fa-star"></i>
+      </div>
       <div>{{ len }}</div>
       <div><b>Overview:</b> {{ desc }}</div>
       <div>
@@ -33,7 +36,7 @@ export default {
     immagine: String,
     titolo: String,
     titoloorigine: String,
-    voto: Number,
+    voti: Number,
     desc: String,
     len: String,
   },
@@ -41,6 +44,11 @@ export default {
     return {
       lingua: ["it", "ja", "en", "fr", "ru"],
     };
+  },
+  methods: {
+    stelle() {
+      return Math.ceil(this.voti / 2);
+    },
   },
 };
 </script>
