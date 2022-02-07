@@ -12,7 +12,7 @@
       <div><b>Titolo:</b> {{ titolo }}</div>
       <div><b>Titolo Originale:</b> {{ titoloorigine }}</div>
       <div><b>Voto:</b> {{ voto }}</div>
-      <div v-for="(voto, i) in stelle" :key="i">
+      <div v-for="(voti, i) in stelle" :key="i">
         <i class="fas fa-star"></i>
       </div>
       <div>{{ len }}</div>
@@ -45,7 +45,7 @@ export default {
       lingua: ["it", "ja", "en", "fr", "ru"],
     };
   },
-  methods: {
+  computed: {
     stelle() {
       return Math.ceil(this.voti / 2);
     },
